@@ -38,6 +38,10 @@ namespace Exam1_Restaurant
                 }
             }
         }
+        public Table GetCurrentTable(string userInput)
+        {
+            return Tables.Single(x=>x.TableNumber == userInput);
+        }
         public enum TableName//Gal panaudoti reiktu
         {
             Table1,

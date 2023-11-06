@@ -9,21 +9,22 @@ namespace Exam1_Restaurant
     public class Menu
     {
         public List<string> _MenuContent = new List<string>();
-        public List<Meal> Meals { get; } = new List<Meal>();
+        public List<Meal> Products { get; } = new List<Meal>();
 
         public Menu(List<string> menuContent) 
         {
             _MenuContent = menuContent;
-            CreateMeals();
+            CreateProducts();
         }
+
         public void ShowMenu()
         {
-            foreach(var item in Meals)
+            foreach(var item in Products)
             {
-                Console.WriteLine($"[{item.ProductNumber}] {item.Title}-{item.Price}EUR");
+                Console.WriteLine($"[{item.Code}] {item.Title}-{item.Price}EUR");
             }
         }
-        private void CreateMeals()
+        private void CreateProducts()
         {
             foreach (string line in _MenuContent)
             {
@@ -33,7 +34,7 @@ namespace Exam1_Restaurant
                 string title = parts[2];
                 decimal cost = decimal.Parse(parts[3]);
 
-                Meals.Add(new Meal(group, productNumber, title, cost));
+                Products.Add(new Meal(group, productNumber, title, cost));
             }
         }
     }

@@ -9,14 +9,15 @@ namespace Exam1_Restaurant
     public class Meal
     {
         public string Group { get; set; }
-        public string ProductNumber { get; set; }
+        public string Code { get; set; }
         public string Title { get; set; }
         public decimal Price { get; set; }
+        public int Quantity { get; set; }
 
-        public Meal(string group, string productNumber, string title, decimal price)
+        public Meal(string group, string code, string title, decimal price)
         {
             Group = group;
-            ProductNumber = productNumber;
+            Code = code;
             Title = title;
             Price = price;
         }

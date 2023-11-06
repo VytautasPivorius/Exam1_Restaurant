@@ -17,11 +17,5 @@ namespace Exam1_Restaurant
             TableNumber = tableNumber;
             IsFree = isFree;
         }
-
-        public void AddProductToOrder()
-        {
-            //Add
-        }
-
     }
 }
