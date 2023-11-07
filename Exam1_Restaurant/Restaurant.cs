@@ -37,20 +37,14 @@ namespace Exam1_Restaurant
                     Console.ResetColor();
                 }
             }
+            Console.WriteLine("---------------------------------------");
         }
         public Table GetCurrentTable(string userInput)
         {
-            return Tables.Single(x=>x.TableNumber == userInput);
+            return Tables.SingleOrDefault(x=>x.TableNumber == userInput);
         }
-        public enum TableName//Gal panaudoti reiktu
-        {
-            Table1,
-            Table2, 
-            Table3, 
-            Table4, 
-            Table5, 
-            Table6
-        }
+        
+
 
     }
 }

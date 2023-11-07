@@ -19,9 +19,25 @@ namespace Exam1_Restaurant
 
         public void ShowMenu()
         {
-            foreach(var item in Products)
+            Console.WriteLine("_________________MENIU_________________");
+            List<string> templist = new List<string>();
+            foreach (var item in Products)
             {
-                Console.WriteLine($"[{item.Code}] {item.Title}-{item.Price}EUR");
+                ShowGroup(item, templist);
+                string menuItemLine = $"[{item.Code}] {item.Title}";
+                Console.Write(menuItemLine);
+                Console.WriteLine($"{item.Price} EUR".PadLeft(60- menuItemLine.Length));
+            }
+           
+            Console.WriteLine("---------------------------------------");
+            
+        }
+        private void ShowGroup(Meal item,List<string> list)
+        {
+            if (!list.Contains(item.Group))
+            {
+                Console.WriteLine(item.Group);
+                list.Add(item.Group);
             }
         }
         private void CreateProducts()

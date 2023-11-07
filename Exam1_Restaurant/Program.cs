@@ -6,15 +6,19 @@ namespace Exam1_Restaurant
     {
         static void Main(string[] args)
         {
-            List<string> menuContent = File.ReadLines(FilePaths.MenuPath).ToList();
-
+            List<string> menuContent = FileReader.ReadContent(FilePaths.MenuPath);
+            
             Restaurant restaurant = new Restaurant();
             while (true)
             {
                 Console.Clear();
                 restaurant.ShowTables();
-                Console.WriteLine("Pasirinkite stala:");
-                string tableSelection = Console.ReadLine();
+                Console.WriteLine("Iseiti -> Q");
+                Console.Write("Pasirinkite stala: ");
+                
+                string tableSelection = Console.ReadLine().ToUpper();
+
+                if (tableSelection == "Q") { break; } //Back
 
                 Table currentTable = restaurant.GetCurrentTable(tableSelection);
                 while (true)
@@ -24,57 +28,39 @@ namespace Exam1_Restaurant
                     Console.WriteLine("1-PRIIMTI UZSAKYMA");
                     Console.WriteLine("2-FORMUOTI SASKAITA");
                     Console.WriteLine("3-ATLAISVINTI STALIUKA");
+                    Console.WriteLine("---------------------------------------");
+                    Console.WriteLine("Grizti atgal -> Q");
+                    Console.Write("Pasirinkite funkcija: ");
                     string functionSelection = Console.ReadLine().ToUpper();
 
-                    if (functionSelection == "Q")
-                    {
-                        break;
-                    }
+                    if (functionSelection == "Q") { break; } //Back
 
                     if (functionSelection == "1")
                     {
                         currentTable.IsFree = false;
                         Console.Clear();
-                        Menu menu = new Menu(menuContent);
                         
-                        currentTable.Order = new Order(currentTable.TableNumber, new List<Meal>(), DateTime.Now);
-                        while (true)
-                        {
+                        Menu menu = new Menu(menuContent);
+                        Order order = new Order();
 
-                            menu.ShowMenu();
-                            Console.WriteLine("------------------------------");
-                            currentTable.Order.Show();
-                            Console.Write("Iveskite produkto koda:");
-                            string selectedProduct = Console.ReadLine().ToUpper();
-
-                            if (selectedProduct == "Q")
-                            {
-                                break;
-                            }
-
-                            Console.Write("Iveskite produkto kieki:");
-                            int selectedQuantity = int.Parse(Console.ReadLine());
-
-                            currentTable.Order.AddProductToOrder(selectedProduct, menu, selectedQuantity);
-
-                            Console.Clear();
-                        }
+                        order.CreateOrder(menu, currentTable);
                     }
                     else if (functionSelection == "2")
                     {
+                        Order order = new Order();
                         
-                        currentTable.Order.Print();
-                        currentTable.IsFree = true;
-                        currentTable.Order.Meals.Clear();
+                        order.PrintOrder(currentTable.OrderedMeals, currentTable);
+                        Console.WriteLine("Grizti atgal -> Q");
                         functionSelection = Console.ReadLine();
-                        if (functionSelection == "Q")
-                        {
-                            break;
-                        }
+
+                        if (functionSelection == "Q") { break; } //Back
+
                     }
                     else if(functionSelection == "3")
                     {
-                        currentTable.IsFree=true;
+                        Console.WriteLine("Grizti atgal -> Q");
+                        Order order = new Order();
+                        order.CleanAfterPayment(currentTable);
                     }
                 }
             }

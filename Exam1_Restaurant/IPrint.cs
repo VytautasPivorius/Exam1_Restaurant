@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Exam1_Restaurant
 {
-    internal interface IPrint
+    public interface IPrint
     {
-        public void Print();
+        public void PrintOrder(List<Meal> meals, Table table);
     }
 }
