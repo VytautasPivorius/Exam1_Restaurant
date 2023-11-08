@@ -23,7 +23,7 @@ namespace Exam1_Restaurant
         {
             foreach (var item in Tables)
             {
-                Console.Write($"Staliukas Nr.{item.TableNumber}-");
+                Console.Write($"Staliukas Nr.{item.TableName}-");
                 if (item.IsFree == true)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
@@ -41,7 +41,7 @@ namespace Exam1_Restaurant
         }
         public Table GetCurrentTable(string userInput)
         {
-            return Tables.SingleOrDefault(x=>x.TableNumber == userInput);
+            return Tables.SingleOrDefault(x=>x.TableName == userInput);
         }
         
 

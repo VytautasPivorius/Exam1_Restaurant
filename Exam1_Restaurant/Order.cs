@@ -19,7 +19,7 @@ namespace Exam1_Restaurant
         {
             Console.WriteLine("________________KVITAS_________________");
             Console.WriteLine($"Data:{DateTime.Now}");
-            Console.WriteLine($"Staliuko numeris: {table.TableNumber}");
+            Console.WriteLine($"Staliuko numeris: {table.TableName}");
             Console.WriteLine("---------------------------------------");
             ShowItems(meals);
             Console.ForegroundColor = ConsoleColor.Green;

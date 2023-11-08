@@ -9,7 +9,7 @@ namespace Exam1_Restaurant
             List<string> menuContent = FileReader.ReadContent(FilePaths.MenuPath);
             
             Restaurant restaurant = new Restaurant();
-            while (true)
+            while (true) // while skirtas stalui pasirinkti
             {
                 Console.Clear();
                 restaurant.ShowTables();
@@ -21,7 +21,7 @@ namespace Exam1_Restaurant
                 if (tableSelection == "Q") { break; } //Back
 
                 Table currentTable = restaurant.GetCurrentTable(tableSelection);
-                while (true)
+                while (true) //while skirtas meniu konkretaus stalo
                 {
                     Console.Clear();
 
@@ -35,7 +35,7 @@ namespace Exam1_Restaurant
 
                     if (functionSelection == "Q") { break; } //Back
 
-                    if (functionSelection == "1")
+                    if (functionSelection == "1") //Uzsakymo priemimas
                     {
                         currentTable.IsFree = false;
                         Console.Clear();
@@ -45,7 +45,7 @@ namespace Exam1_Restaurant
 
                         order.CreateOrder(menu, currentTable);
                     }
-                    else if (functionSelection == "2")
+                    else if (functionSelection == "2") //Saskaitos formavimas
                     {
                         Order order = new Order();
                         
@@ -56,7 +56,7 @@ namespace Exam1_Restaurant
                         if (functionSelection == "Q") { break; } //Back
 
                     }
-                    else if(functionSelection == "3")
+                    else if(functionSelection == "3") //Staliuko atlaisvinimas
                     {
                         Console.WriteLine("Grizti atgal -> Q");
                         Order order = new Order();

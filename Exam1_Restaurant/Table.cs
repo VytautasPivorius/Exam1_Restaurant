@@ -8,13 +8,13 @@ namespace Exam1_Restaurant
 {
     public class Table
     {
-        public string TableNumber { get; set; }
+        public string TableName { get; set; }
         public bool IsFree { get; set; }
         public List<Meal> OrderedMeals { get; set; } = new List<Meal> ();
 
-        public Table(string tableNumber, bool isFree)
+        public Table(string tableName, bool isFree)
         {
-            TableNumber = tableNumber;
+            TableName = tableName;
             IsFree = isFree;
         }
         public void AddProductToOrder(string selection, Menu menu, int quantity)
@@ -28,15 +28,6 @@ namespace Exam1_Restaurant
                     OrderedMeals.Add(orderedMeal);
                 }
             }
-        }
-        public enum TableName
-        {
-            Table1,
-            Table2,
-            Table3,
-            Table4,
-            Table5,
-            Table6
         }
     }
 }

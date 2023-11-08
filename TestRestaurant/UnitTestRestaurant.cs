@@ -17,7 +17,7 @@ namespace TestRestaurant
 
             // Assert
             Assert.IsNotNull(resultTable);
-            Assert.AreEqual(expectedTableNumber, resultTable.TableNumber);
+            Assert.AreEqual(expectedTableNumber, resultTable.TableName);
         }
 
         [TestMethod]

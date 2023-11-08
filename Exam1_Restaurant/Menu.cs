@@ -32,7 +32,7 @@ namespace Exam1_Restaurant
             Console.WriteLine("---------------------------------------");
             
         }
-        private void ShowGroup(Meal item,List<string> list)
+        private void ShowGroup(Meal item,List<string> list)//Rodomos patiekalu grupes (uzkandziai,gerimai ir pan..)
         {
             if (!list.Contains(item.Group))
             {
