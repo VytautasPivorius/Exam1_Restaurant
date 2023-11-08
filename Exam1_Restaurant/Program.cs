@@ -54,9 +54,8 @@ namespace Exam1_Restaurant
                     }
                     else if (functionSelection == "2") //Saskaitos formavimas
                     {
-                        Order order = new Order();
-                        
-                        order.PrintOrder(currentTable);
+                        IPrint printOrder = new Order();
+                        printOrder.PrintOrder(currentTable);
                         Console.WriteLine("Grizti atgal -> Q");
                         functionSelection = Console.ReadLine();
 
