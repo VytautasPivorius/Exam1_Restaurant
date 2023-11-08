@@ -1,0 +1,24 @@
+Uzkandziai;100;Surio spurgytes;5.50
+Uzkandziai;101;Batatu lazdeles;4.50
+Uzkandziai;102;Kepta duona;3.90
+Uzkandziai;103;Marinuotos alyvuoges;4.90
+Uzkandziai;104;Uzkandziu rinkinys;10.90
+Sriubos;200;Cili sriuba;2.10
+Sriubos;201;Saltibarsciai;4.50
+Patiekalai;300;Kiaulienos sonkauliai;12.00
+Patiekalai;301;Lasisos file;8.90
+Patiekalai;302;Kijevo kotletas;6.90
+Patiekalai;303;Vistienos file;6.50
+Patiekalai;304;Traski vistiena su darzovemis;6.20
+Patiekalai;305;Burgeris su vistiena;8.20
+Patiekalai;306;Burgeris su jautiena;8.90
+Desertai;400;Ledai;2.50
+Desertai;401;Obuoliu pyragas;4.90
+Desertai;402;Sokoladinis pyragas;4.90
+Gerimai;500;Stalo vanduo;1.50
+Gerimai;501;Sultys;2.00
+Gerimai;502;Gira;2.10
+Alkoholis;600;Sidras;4.00
+Alkoholis;601;Alus;4.50
+Alkoholis;602;Vynas;3.50
+Alkoholis;603;Sampanas;2.90

@@ -8,6 +8,6 @@ namespace Exam1_Restaurant
 {
     public class FilePaths
     {
-        public const string MenuPath = @"C:\Users\vytautas.pivorius\OneDrive - RP\Desktop\CodeAcademy\Advanced\Exam1_Restaurant\Menu.txt";
+        public const string MenuPath = @"MenuData.txt";
     }
 }
