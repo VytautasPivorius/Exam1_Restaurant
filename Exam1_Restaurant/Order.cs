@@ -17,6 +17,7 @@ namespace Exam1_Restaurant
 
         public void PrintOrder(List<Meal> meals,Table table)
         {
+            Console.Clear();
             Console.WriteLine("________________KVITAS_________________");
             Console.WriteLine($"Data:{DateTime.Now}");
             Console.WriteLine($"Staliuko numeris: {table.TableName}");

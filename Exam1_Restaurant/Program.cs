@@ -17,6 +17,8 @@ namespace Exam1_Restaurant
                 Console.Write("Pasirinkite stala: ");
                 
                 string tableSelection = Console.ReadLine().ToUpper();
+                
+                
 
                 if (tableSelection == "Q") { break; } //Back
 
