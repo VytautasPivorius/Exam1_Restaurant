@@ -36,7 +36,9 @@ namespace Exam1_Restaurant
         {
             if (!list.Contains(item.Group))
             {
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine(item.Group);
+                Console.ResetColor();
                 list.Add(item.Group);
             }
         }
