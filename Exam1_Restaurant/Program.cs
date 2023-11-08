@@ -18,7 +18,12 @@ namespace Exam1_Restaurant
                 
                 string tableSelection = Console.ReadLine().ToUpper();
                 
-                
+                if(!restaurant.Tables.Any(x=>x.TableName == tableSelection))//Tikrina ar staliukas egzistuoja
+                {
+                    Console.WriteLine("Staliukas neegzistuoja");
+                    Thread.Sleep(1000);
+                    continue;
+                }
 
                 if (tableSelection == "Q") { break; } //Back
 
