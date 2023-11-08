@@ -8,6 +8,6 @@ namespace Exam1_Restaurant
 {
     public interface IPrint
     {
-        public void PrintOrder(List<Meal> meals, Table table);
+        public void PrintOrder(Table table);
     }
 }

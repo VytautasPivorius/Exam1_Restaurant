@@ -56,7 +56,7 @@ namespace Exam1_Restaurant
                     {
                         Order order = new Order();
                         
-                        order.PrintOrder(currentTable.OrderedMeals, currentTable);
+                        order.PrintOrder(currentTable);
                         Console.WriteLine("Grizti atgal -> Q");
                         functionSelection = Console.ReadLine();
 

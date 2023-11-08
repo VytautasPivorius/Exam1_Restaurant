@@ -15,16 +15,16 @@ namespace Exam1_Restaurant
         }
         
 
-        public void PrintOrder(List<Meal> meals,Table table)
+        public void PrintOrder(Table table)
         {
             Console.Clear();
             Console.WriteLine("________________KVITAS_________________");
             Console.WriteLine($"Data:{DateTime.Now}");
             Console.WriteLine($"Staliuko numeris: {table.TableName}");
             Console.WriteLine("---------------------------------------");
-            ShowItems(meals);
+            ShowItems(table.OrderedMeals);
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"MOKETI: {CalucalateTotal(meals)} EUR");
+            Console.WriteLine($"MOKETI: {CalucalateTotal(table.OrderedMeals)} EUR");
             Console.ResetColor();
             CleanAfterPayment(table);
 
